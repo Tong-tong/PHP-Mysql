@@ -1,10 +1,121 @@
+<!-- include"getnews.php"; -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>百度新闻</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/news.css">
 </head>
+
 <body>
-	<p>updata</p>
+    <div class="container">
+        <header class="cf">
+            <a href="#" class="logo"><span class="iconfont">&#x3487;</span></a>
+            <a href="#" class="user"><span class="iconfont">&#xe612;</span></a>
+            <a href="#" class="more"><span class="iconfont">&#xe62f;</span></a>
+            <a href="#" class="search"><span class="iconfont">&#xe65c;</span></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">精选</a></li>
+                <li>
+                    <a href="#">百家</a>
+                </li>
+                <li>
+                    <a href="#">本地</a>
+                </li>
+                <li>
+                    <a href="#">图片</a>
+                </li>
+                <li>
+                    <a href="#">娱乐</a>
+                </li>
+                <li>
+                    <a href="#">社会</a>
+                </li>
+                <li>
+                    <a href="#">军事</a>
+                </li>
+                <li>
+                    <a href="#">女人</a>
+                </li>
+                <li>
+                    <a href="#">搞笑</a>
+                </li>
+                <li>
+                    <a href="#">互联网</a>
+                </li>
+                <li>
+                    <a href="#">更多</a>
+                </li>
+            </ul>
+        </nav>
+        <article class="news-main">
+            <!-- 自动添加 -->
+            <ul class="news-lists">
+                <!--     <li class="news-list">
+                    <div class="newsimg">
+                        <img src="./img/1.jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>Facebook能让这个世界变得更好吗？</h1>
+                        <p><span class="newstime">2017年6月24日</span><span class="newssrc">科技早报</span></p>
+                    </div>
+                </li> -->
+                <!--  <li class="news-list">
+                    <div class="newsimg">
+                        <img src="./img/2.jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>共享单车之战胜负接近尾声，马化腾在焦虑什么</h1>
+                        <p><span class="newstime">2017年6月24日</span><span class="newssrc">科技早报</span></p>
+                    </div>
+                </li>
+
+
+                  <li class="news-list">
+                    <div class="newsimg">
+                        <img src="./img/3.png" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>马云在美国说：政治问题可以贸易化嘛</h1>
+                        <p><span class="newstime">2017年6月24日</span><span class="newssrc">科技早报</span></p>
+                    </div>
+                </li>
+
+
+                  <li class="news-list">
+                    <div class="newsimg">
+                        <img src="./img/4.jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>“量”的战争谢幕，内容分发进入“质”力的角斗场</h1>
+                        <p><span class="newstime">2017年6月24日</span><span class="newssrc">科技早报</span></p>
+                    </div>
+                </li> -->
+            </ul>
+        </article>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/news.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var deviceWidth = $('body').width();
+       // console.log(deviceWidth);
+        $('nav li').each(function(index, item) {
+            if ($(this).find('a').html().split(',').length>2) {
+                //split将所得字符串拆分，得到数组。
+                $(this).width(deviceWidth/3);
+            } else {
+                $(this).width(deviceWidth/6);
+            }
+        });
+    });
+    </script>
 </body>
+
 </html>
